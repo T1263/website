@@ -1,0 +1,229 @@
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box
+
+// Variables
+$tablet: 769px !default
+$olddesktop: 800px !default
+$primary: #212121
+$blurColor: #555555
+$menuBackground: #1B1B1B
+$novoRed: white
+
+
+$mainFont: "Open Sans"
+$logoFont: "Source Code Pro"
+
+// Mixins 
+=novo-signature-mixin($position, $border-bottom)
+    position: $position
+    width: 100%
+    height: 0
+    bottom: 0
+    border-top: 250px solid transparent
+    border-bottom: $border-bottom solid transparent
+
+body
+    margin: 0
+    font-family: $mainFont
+    background: $primary
+    font-display: auto
+
+.title
+    text-transform: uppercase
+    font-size: 1.4em
+    letter-spacing: .1em
+    font-weight: 700
+
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+
+.site-info, .stripe-top
+    overflow: hidden
+    
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css')
+// Grid
+.row
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+.col-1
+    width: 8.33%
+
+.col-2 
+    width: 16.66%
+
+.col-3 
+    width: 25%
+
+.col-4
+    width: 33.33%
+
+.col-5
+    width: 41.66%
+
+.col-6
+    width: 50%
+
+.col-7
+    width: 58.33%
+
+.col-8
+    width: 66.66%
+
+.col-9
+    width: 75%
+
+.col-10
+    width: 83.33%
+
+.col-11
+    width: 91.66%
+
+.col-12
+    width: 100%
+// End Grid
+// Media Query
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=olddesktop
+  @media screen and (max-height: $tablet - 169px) and (max-width: $olddesktop)
+    @content
+
+=oldScreen
+  @media screen and (min-width: $tablet + 1px) and (max-width: 1041px)
+    @content
+// End Media Query
+// Header
+.header
+    background: $primary
+    padding-left: 20px
+    padding-right: 20px
+// Logo
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans')
+.logo p
+    font-family: $logoFont
+    color: $novoRed
+    font-display: auto
+// Bar
+bar .fa-bars
+    position: relative
+    margin-top: 10px
+    color: $novoRed
+    cursor: pointer
+// Menu
+.menu
+    position: fixed
+    left: 50%
+    width: 300px
+    z-index: 100
+    top: calc(50vh - 180px)
+.menu ul
+    position: relative
+    left: -50%
+    list-style: none
+    background: $menuBackground
+    padding: 10px
+.menu ul li
+    padding: 10px
+    cursor: pointer
+.menu a
+    color: white
+    text-decoration: none
+    &:hover
+        color: $blurColor
+        
+.menu-logo
+    cursor: default
+
+.fa-times
+    color: white
+.books-link
+    border-bottom: 2px solid $novoRed
+    a, a:hover
+        color: $novoRed
+
+// Home
+.fa-circle
+    font-size: 350px
+    color: $novoRed
+    text-shadow: 10px 4px 3px #444
+    +mobile
+    +olddesktop
+        font-size: 160px
+
+.home-logo
+    margin-top: 0px
+
+// Product
+.products
+    background: $novoRed
+    color: $primary
+    padding-bottom: 50px
+    z-index: 100
+    .title
+        padding: 30px 
+    
+.products a
+    color: $primary
+    &:hover
+        color: $blurColor
+
+.fa-th-list
+    padding-right: 10px
+    
+.novo-signature-stripe
+    +novo-signature-mixin(relative, 0px)
+    border-right: 100vw solid $novoRed
+    
+.novo-signature-stripe-end
+    +novo-signature-mixin(relative, 210px)
+    top: -250px
+    border-left: 100vw solid $novoRed
+
+// Tech
+.technologies
+    padding-bottom: 200px
+    margin-top: -200px
+    color: $novoRed
+    text-align: center
+    +oldScreen
+        padding-bottom: 200px
+    .tech
+        color: $novoRed
+        font-size: 80px
+        i
+            padding: 20px
+        +mobile
+            font-size: 60px
+// About
+.about
+    padding-left: 20px
+    .title , p 
+        color: $novoRed
+        +mobile
+            text-align: justify
+            text-justify: inter-word
+// Contact
+.contact
+    margin-top: -80px
+    padding-right: 20px
+    .title, a
+        color: $novoRed
+    a 
+        font-size: 48px
+        padding: 10px
+
+// Footer
+.copy 
+    color: $novoRed
+    padding: 20px

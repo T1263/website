@@ -29,7 +29,7 @@ class Contact extends ApplicationBase {
                 <h1 class="title"><i class="fa fa-phone"></i> Contact </h1>
                 <a class="phone" href=""> ${this.phone}</a><br/>
                 <address>
-                    ${this.address}
+                    <i class="fas fa-map-marker-alt"></i> ${this.address}
                 </address>
                 <a class="contact-page" href=""><i class="fas fa-id-card-alt" title="Contact Form"></i></a> <a class="github" href=""><i class="fab fa-github" title="Github"></i></a>
       </div>

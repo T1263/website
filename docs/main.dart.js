@@ -2418,7 +2418,7 @@ j:function(){var u="href"
 this.b.querySelector("a.contact-page").setAttribute(u,"https://books.novo.ws/contact")
 this.b.querySelector("a.github").setAttribute(u,"https://github.com/novo-ws")
 this.b.querySelector("a.phone").setAttribute(u,"tel:9293240887")},
-p:function(){return'      <div class="text-center contact">\n                <h1 class="title"><i class="fa fa-phone"></i> Contact </h1>\n                <a class="phone" href=""> (929) 324-0887</a><br/>\n                <address>\n                    <i class="fas fa-map-marker-alt"></i> 417 Irving Ave, Brooklyn NY 11237\n                </address>\n                <a class="contact-page" href=""><i class="fas fa-id-card-alt" title="Contact Form"></i></a> <a class="github" href=""><i class="fab fa-github" title="Github"></i></a>\n      </div>\n    '}}
+p:function(){return'      <div class="text-center contact">\n                <h1 class="title"><i class="fa fa-phone"></i> Contact </h1>\n                <a class="phone" href=""> (929) 324-0887</a><br/>\n                <a class="contact-page" href=""><i class="fas fa-id-card-alt" title="Contact Form"></i></a> <a class="github" href=""><i class="fab fa-github" title="Github"></i></a>\n      </div>\n    '}}
 N.by.prototype={
 p:function(){return'      <div class="footer">\n                <p class="copy">\xa9 '+this.c+" Novo Work Systems</p>\n      </div>\n    "}}
 A.bA.prototype={
